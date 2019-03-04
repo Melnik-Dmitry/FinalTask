@@ -13,10 +13,10 @@ public class ParkingAttendant {
 
     private void addCar(CarPark carPark, Auto automobile) throws NullPointerException {
 
-        if (carPark == null && automobile == null) {
+        if (carPark == null && automobile == null) { // тут условие видимо должно быть ИЛИ
             throw new NullPointerException ();
         }
-        if (carPark.getAmountOfFreeParkingSpaces () > 0) {
+        if (carPark.getAmountOfFreeParkingSpaces () > 0) { // иначе тут может быть NullPointerException
             carPark.getAutomobiles ().add ( automobile );
         }
     }
@@ -52,7 +52,7 @@ public class ParkingAttendant {
     public void reduceCarFromCarPark(CarPark carPark, int amountReduceddAuto) throws NullPointerException {
 
         if (carPark == null) {
-            throw new NullPointerException ();
+            throw new NullPointerException();
         }
 
         if (amountReduceddAuto > carPark.getAutomobiles ().size ()) {

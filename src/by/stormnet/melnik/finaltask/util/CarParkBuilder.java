@@ -13,7 +13,8 @@ public class CarParkBuilder {
     }
 
     public static CarPark buildCarPark(int amountOfParkingSpaces, List<Auto> automobiles) {
-
+        // тут можно сделать проверку входных параметров
+        // если не валидны вовращать null
         return new CarPark(amountOfParkingSpaces, automobiles);
     }
 
@@ -23,7 +24,10 @@ public class CarParkBuilder {
         if (amountOfParkingSpacesAfterIncrease <= CarPark.START_CAPACITY) {
             System.out.println("Invalid parameter");
         } else if (carPark == null) {
-            throw new NullPointerException();
+            throw new NullPointerException(); // тут лучше не кидать исключение
+            // а просто не увеличивать тогда парковку с сообщением в лог/консоль
+            // а метод может вовращать true/false в 3ависимости от того получилось ли увеличить парковку
+            // чтобы в месте вы3ова можно было видеть ре3ультат
         }
 
         carPark.setAmountOfParkingSpaces(amountOfParkingSpacesAfterIncrease);

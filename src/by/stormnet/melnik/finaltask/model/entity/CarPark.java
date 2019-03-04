@@ -30,7 +30,9 @@ public class CarPark {
         } else if (automobiles == null) {
             System.out.println("Invalid parameters.");
             this.automobiles = new ArrayList<>();
-            throw new NullPointerException();
+            throw new NullPointerException(); // тут тоже вместо выброса ошибки
+            // лучше проверять валидность параметра ДО вы3ова конструктора
+            // в buildCarPark
         }
         this.amountOfParkingSpaces = amountOfParkingSpaces;
         this.automobiles = automobiles;

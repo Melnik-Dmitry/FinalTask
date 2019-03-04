@@ -11,7 +11,8 @@ public class Mazda extends PassengerCar {
 
     public Mazda(FuelType fuelType, CarsColor color, double volumeOfEngine,
                  boolean isAutomatTransmission, CarBrand brand, MazdaModel model) {
-        super(fuelType, color, volumeOfEngine, isAutomatTransmission, brand);
+        super(fuelType, color, volumeOfEngine, isAutomatTransmission, brand); // тут бренд можно 3ахардкодить
+        // он ведь у ма3ды всегда будет ма3да
         this.model = model;
     }
 

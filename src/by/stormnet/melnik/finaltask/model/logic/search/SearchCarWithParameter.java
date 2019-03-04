@@ -9,7 +9,8 @@ public class SearchCarWithParameter {
 
     public static Auto searchCarWithColor(CarPark carPark, Object parameter) throws NullPointerException {
         if (carPark == null) {
-            throw new NullPointerException();
+            throw new NullPointerException(); // и тут тоже не обя3ательно кидать NullPointerException
+            // лучше просто вывод в консоль + логгер и во3врат null
         }
         Auto automobile = null;
 
